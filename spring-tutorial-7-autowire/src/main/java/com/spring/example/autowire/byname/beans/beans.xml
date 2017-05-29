@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="drawing" class="com.spring.example.autowire.byname.Drawing"
+		autowire="byName">
+		<!-- byType:  No qualifying bean of type 'com.spring.example.autowire.byname.Shape' available: expected single matching bean but found 2: triangle,circle -->
+		
+	</bean>
+	<bean id="triangle" class="com.spring.example.autowire.byname.Triangle">
+		<property name="name" value="triangle"></property>
+	</bean>
+	<bean id="circle" class="com.spring.example.autowire.byname.Circle">
+		<property name="name" value="circle"></property>
+	</bean>
+</beans>
